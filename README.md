@@ -2,6 +2,8 @@
 
 A 3D first-person escape game platform. Walk through mystery rooms, inspect clues, solve codes, and close the case — with an AI Game Master guiding you.
 
+**[Play the game →](https://mysteryhub-iqepkiiov-yorgoas-projects.vercel.app)**
+
 ---
 
 ## Concept
