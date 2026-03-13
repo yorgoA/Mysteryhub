@@ -16,29 +16,6 @@ A 3D first-person escape game platform. Walk through mystery rooms, inspect clue
 
 ---
 
-## Quick Start
-
-### Prerequisites
-
-- Node.js 18+
-- npm
-
-### Run locally
-
-```bash
-# Install dependencies
-npm install --legacy-peer-deps
-
-# Start dev server
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-**First time:** Sign up or sign in, then go to **Mysteries** → **The Stolen Painting** → **Begin Investigation**. Click the 3D view to enable walking (WASD), then explore and solve the case.
-
----
-
 ## Controls (In-Game)
 
 | Action        | Input                  |
@@ -48,24 +25,6 @@ Open [http://localhost:3000](http://localhost:3000).
 | Look around   | Mouse                  |
 | Inspect item  | Click on 3D object     |
 | Exit walk mode| Esc                    |
-
----
-
-## Supabase (Optional)
-
-For real auth, progress, and leaderboards, set up [Supabase](https://supabase.com):
-
-1. Create a project at [supabase.com](https://supabase.com)
-2. Create `.env.local` in the project root with:
-
-   ```
-   NEXT_PUBLIC_SUPABASE_URL=your-project-url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
-   ```
-
-4. Run migrations in Supabase → SQL Editor (see `supabase/migrations/` and [SUPABASE_STEPS.md](./SUPABASE_STEPS.md))
-
-Without Supabase, the app uses mock auth (any credentials work) and progress is not persisted.
 
 ---
 
@@ -95,22 +54,10 @@ src/
 
 ---
 
-## Available Scripts
-
-| Command        | Description              |
-|----------------|--------------------------|
-| `npm run dev`  | Start dev server         |
-| `npm run build`| Production build         |
-| `npm run start`| Run production server    |
-| `npm run lint` | Run ESLint               |
-
----
-
 ## Docs
 
 | Doc | Purpose |
 |-----|---------|
-| [SUPABASE_STEPS.md](./SUPABASE_STEPS.md) | Supabase migration steps |
 | [BUILD_PLAN.md](./BUILD_PLAN.md) | Phases and roadmap |
 | [docs/MVP_SCOPE.md](./docs/MVP_SCOPE.md) | MVP scope |
 | [docs/TECH_STACK.md](./docs/TECH_STACK.md) | Tech stack details |
