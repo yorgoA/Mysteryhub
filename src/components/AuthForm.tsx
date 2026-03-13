@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import { checkSignUpAllowed } from "@/actions/auth";
 
 type Mode = "sign-in" | "sign-up";
 
@@ -30,6 +31,12 @@ export function AuthForm({ mode }: { mode: Mode }) {
 
     try {
       if (mode === "sign-up") {
+        const { allowed, error: limitError } = await checkSignUpAllowed();
+        if (!allowed && limitError) {
+          setError(limitError);
+          setLoading(false);
+          return;
+        }
         const { data, error: signUpError } = await supabase.auth.signUp({
           email,
           password,
